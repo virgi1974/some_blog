@@ -1,13 +1,146 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #5760dd;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+
+  position: relative;
+  /* display: block; */
+  /* text-decoration: none; */
+  font-size: 1.5rem;
+  color: #5760dd;
+  /* text-transform: uppercase; */
+  /* padding: 4px 0; */
+  transition: 0.5s;
+}
+.navbar a:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: #c1c4ee;
+  transition: transform 0.4s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.navbar a:hover {
+  color: #5760dd;
+}
+.navbar a:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+  position: relative;
+  /* top: 10px; */
+  /* left: 10px; */
+}
+
+.App-spinner {
+  height: 30px;
+  width: 30px;
+}
+
+/* blog previews / list */
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.blog-preview h2 {
+  font-size: 20px;
+  color: #5760dd;
+  margin-bottom: 8px;
+}
+.blog-preview a {
+  text-decoration: none;
+}
+
+/* BlogDeatils */
+.blog-details h2 {
+  font-size: 20px;
+  color: #5760dd;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+}
+.blog-details button {
+  width: 70px;
+  background: #5760dd;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* create new blog form */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #5760dd;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  width: 40%;
+  background: #9498f1;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.create button:hover {
+  background-color: #5760dd;
 }
