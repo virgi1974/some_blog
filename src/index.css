@@ -61,3 +61,17 @@
   color: #5760dd;
   margin-bottom: 8px;
 }
+.blog-preview a {
+  text-decoration: none;
+}
+
+/* BlogDeatils */
+.blog-details h2 {
+  font-size: 20px;
+  color: #5760dd;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+}
+

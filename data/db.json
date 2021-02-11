@@ -2,13 +2,13 @@
   "blogs": [
     {
       "title": "title-1 by virgilio",
-      "body": "Lorem ipsum dolor sit amet consectetur",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, beatae? Mollitia voluptatibus provident accusantium placeat obcaecati aspernatur velit non facilis assumenda sed dolorem saepe possimus quae, vero eligendi ipsam delectus?",
       "author": "virgilio",
       "id": 1
     },
     {
       "title": "title-1 by Ari",
-      "body": "xxxxxxxxxxxxxx",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, beatae? Mollitia voluptatibus provident accusantium placeat obcaecati aspernatur velit non facilis assumenda sed dolorem saepe possimus quae, vero eligendi ipsam delectus?",
       "author": "Ariadna",
       "id": 2
     },
