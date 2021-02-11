@@ -7,9 +7,11 @@ const useFetch = (url) => {
 
   useEffect(() => {
     console.log('use effect was run');
+    
+    const abortCont = new AbortController();
 
     setTimeout(() => {
-      fetch(url)
+      fetch(url, { signal: abortCont.signal })
         .then(res => {
           console.log(res);
           if (!res.ok) {
@@ -25,11 +27,18 @@ const useFetch = (url) => {
           setError(null);
         })
         .catch(err => {
-          // console.error(err.message);
-          setisPending(false);
-          setError(err.message);
+          if (err.name === 'AbortError') {
+            console.log('Fetch aborted');
+          } else {
+            // console.error(err.message);
+            setisPending(false);
+            setError(err.message);
+          }
         })
     }, 1000)
+
+    // we return a cleanup function
+    return () => abortCont.abort();
 
   }, [url])
 
