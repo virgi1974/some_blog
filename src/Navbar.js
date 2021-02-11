@@ -1,4 +1,6 @@
 import logo from './logo.svg';
+import { Link } from 'react-router-dom';
+
 // scf -> stateless functional component
 const Navbar = () => {
   return ( 
@@ -6,8 +8,8 @@ const Navbar = () => {
       <img src={logo} className="App-logo" alt="logo" />
       <h1>Virgi Blog</h1>
       <div className="links">
-        <a href="/">Home</a>
-        <a href="/create">New Blog</a>
+        <Link to="/">Home</Link>
+        <Link to="/create">New Blog</Link>
       </div>
     </nav>
   );
