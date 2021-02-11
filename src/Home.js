@@ -1,41 +1,10 @@
-import { useState, useEffect } from "react";
+import useFetch from "./useFetch";
 import BlogList from "./BlogList";
 import spinner from './spinner.gif';
 
 
 const Home = () => {
-  const [blogs, setBlogs] = useState(null);
-  const [isPending, setisPending] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    console.log('use effect was run');
-
-    setTimeout(() => {
-      fetch('http://localhost:8000/blogs')
-        .then(res => {
-          console.log(res);
-          if (!res.ok) {
-            throw Error('could not fetch data from DB')
-          }
-          return res.json();
-        })
-        .then(data => {
-          console.log("-- blogs from json file --");
-          console.table(data);
-          setBlogs(data);
-          setisPending(false);
-          setError(null);
-        })
-        .catch(err => {
-          // console.error(err.message);
-          setisPending(false);
-          setError(err.message);
-        })
-    }, 1000)
-
-  }, [])
-
+  const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs');
   return ( 
     <>
       { error && <div style={{color: "red"}}>{error}</div> }
