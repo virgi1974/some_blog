@@ -1,4 +1,4 @@
-# Main commands to run the app 
+# Main commands to run the app
 
 Starting json server to store data locally
 
